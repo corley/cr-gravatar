@@ -1,0 +1,13 @@
+{
+  "name": "cr-gravatar",
+  "main": [
+    "./cr-gravatar.js"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "crypto-js": "http://crypto-js.googlecode.com/files/CryptoJS%20v3.1.2.zip"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.16"
+  }
+}
