@@ -7,13 +7,9 @@ angular.module('corley.gravatar', [])
                 email: "@",
                 size: "@"
             },
-            template: '<img src="http://www.gravatar.com/avatar/{{email}}?s={{size | number}}">',
+            template: '<img src="http://www.gravatar.com/avatar/{{emailCrypt}}?s={{size | number}}">',
             link: function(scope, elem, attr){
-                var c;
-                scope.$apply(function(){
-                    c = CryptoJS.MD5(scope.email);
-                });
-                scope.email = c.toString();
+                scope.emailCrypt = CryptoJS.MD5(scope.email).toString();
             }
         };
     });
